@@ -1,0 +1,144 @@
+# ANÁLISIS DE DATOS EN EL MANTENIMIENTO PREDICTIVO
+
+## 1. Problema y pregunta de datos
+
+El problema que escogí es el mantenimiento de los motores eléctricos en una empresa industrial. Los motores son equipos que trabajan durante muchas horas y con el tiempo pueden presentar problemas como calentamiento, vibraciones, desgaste de rodamientos o fallas eléctricas.
+
+Muchas veces el mantenimiento se hace cada cierto tiempo, pero esto no siempre significa que el motor esté fallando justo en ese momento. También puede pasar que una falla aparezca antes de la fecha programada y el equipo termine detenido.
+
+Por eso me parece importante utilizar los datos que entregan los motores para conocer mejor su estado y poder detectar una posible falla antes de que ocurra.
+
+### Pregunta de datos
+
+**¿Se pueden utilizar los datos de los motores eléctricos para detectar posibles fallas y saber cuándo es necesario hacer mantenimiento?**
+
+---
+
+# 2. Inventario de datos
+
+Para este proyecto se pueden utilizar diferentes datos que se obtienen de los motores y de los registros de mantenimiento.
+
+| N.º | Dato                              | Tipo             | Uso                                                                      |
+| --- | --------------------------------- | ---------------- | ------------------------------------------------------------------------ |
+| 1   | Temperatura del motor             | Estructurado     | Saber si el motor se está calentando demasiado.                          |
+| 2   | Nivel de vibración                | Estructurado     | Detectar problemas de rodamientos, desbalanceo o desalineación.          |
+| 3   | Corriente eléctrica               | Estructurado     | Revisar si el motor está trabajando con una corriente normal.            |
+| 4   | Voltaje                           | Estructurado     | Verificar que la alimentación eléctrica sea adecuada.                    |
+| 5   | Velocidad del motor (RPM)         | Estructurado     | Comprobar que el motor esté girando correctamente.                       |
+| 6   | Horas de trabajo                  | Estructurado     | Saber cuánto tiempo lleva funcionando el motor.                          |
+| 7   | Historial de mantenimiento        | Estructurado     | Revisar cuándo se hicieron mantenimientos y qué problemas tuvo el motor. |
+| 8   | Alarmas del PLC                   | Semiestructurado | Saber cuándo el equipo presentó una alarma o un cambio de estado.        |
+| 9   | Archivos de datos de los sensores | Semiestructurado | Guardar las mediciones tomadas por los sensores.                         |
+| 10  | Informes de los técnicos          | No estructurado  | Conocer qué encontraron los técnicos durante las revisiones.             |
+
+Como se puede observar, hay datos estructurados, como la temperatura y la corriente; semiestructurados, como los archivos de los sensores y las alarmas; y no estructurados, como los informes de mantenimiento.
+
+---
+
+# 3. Tipo de analítica
+
+En este proyecto se pueden utilizar principalmente tres tipos de analítica.
+
+### Analítica descriptiva
+
+La analítica descriptiva sirve para saber qué está pasando actualmente o qué pasó anteriormente.
+
+Por ejemplo, se pueden revisar los datos de temperatura y vibración de un motor durante los últimos meses y ver si han tenido cambios.
+
+Un ejemplo sería que un motor normalmente trabaje a unos 60 °C, pero últimamente esté llegando a 75 °C. Esto puede ser una señal de que algo está cambiando.
+
+### Analítica predictiva
+
+La analítica predictiva sirve para tratar de saber qué podría pasar después.
+
+Con los datos históricos se pueden buscar patrones. Por ejemplo, si un motor aumenta poco a poco su temperatura y también aumenta su vibración, se podría predecir que existe una posibilidad de que presente una falla.
+
+### Analítica prescriptiva
+
+La analítica prescriptiva sirve para decidir qué hacer después de analizar los datos.
+
+Por ejemplo, si se detecta que un motor tiene una vibración más alta de lo normal, el sistema podría recomendar revisar los rodamientos antes de que ocurra una falla más grave.
+
+Por lo tanto, en este proyecto se utilizarían:
+
+**Analítica descriptiva → Analítica predictiva → Analítica prescriptiva**
+
+---
+
+# 4. ¿Este proyecto tiene relación con Big Data?
+
+Sí, considero que este proyecto puede relacionarse con Big Data porque los motores pueden generar muchos datos constantemente.
+
+Por ejemplo, si una empresa tiene muchos motores y cada uno tiene sensores de temperatura, vibración, corriente y otras variables, se pueden obtener miles de datos en poco tiempo.
+
+También se tienen diferentes tipos de información, como números de sensores, alarmas, archivos e informes de mantenimiento.
+
+En este caso se pueden relacionar las 5 V de Big Data de la siguiente manera:
+
+**Volumen:** Se pueden generar muchos datos de todos los motores.
+
+**Velocidad:** Los sensores pueden enviar datos constantemente.
+
+**Variedad:** Hay diferentes tipos de datos, como números, alarmas, archivos e informes.
+
+**Veracidad:** Es importante revisar que los sensores estén funcionando bien y que los datos sean correctos.
+
+**Valor:** Los datos pueden servir para evitar fallas y disminuir los costos de mantenimiento.
+
+Por esto, sí podría ser considerado un caso de Big Data aplicado a una empresa industrial.
+
+---
+
+# 5. Ciclo de vida del proyecto
+
+El ciclo de vida que utilizaría en este proyecto sería el siguiente:
+
+**Pregunta → Obtener → Limpiar → Analizar → Visualizar → Decidir**
+
+### Pregunta
+
+Primero se plantea la pregunta de si es posible detectar una falla del motor antes de que suceda.
+
+### Obtener
+
+Se obtienen los datos de los sensores y de los mantenimientos realizados anteriormente.
+
+### Limpiar
+
+Se revisan los datos para eliminar información repetida o incorrecta. También se revisan los datos que puedan estar faltando.
+
+### Analizar
+
+Se comparan los datos actuales con los datos anteriores para encontrar cambios o comportamientos fuera de lo normal.
+
+### Visualizar
+
+Los resultados se pueden mostrar por medio de gráficas. Por ejemplo, una gráfica de temperatura y otra de vibración para ver cómo cambian con el tiempo.
+
+### Decidir
+
+Finalmente, con los resultados se puede decidir si es necesario realizar una revisión o mantenimiento al motor.
+
+### Representación
+
+**PREGUNTA → OBTENER → LIMPIAR → ANALIZAR → VISUALIZAR → DECIDIR**
+
+Después de tomar la decisión, se siguen obteniendo nuevos datos y el proceso vuelve a empezar.
+
+---
+
+# 6. READING – “PROBLEM & DATA”
+
+### Problem & Data
+
+The problem is that electric motors can fail unexpectedly in industrial companies. These failures can stop the production and cause extra maintenance costs. The data needed includes temperature, vibration, current, voltage, speed, operating hours and maintenance history. Some data is structured, such as sensor measurements, while other data is semi-structured or unstructured. Descriptive, predictive and prescriptive analytics can be used to analyze the condition of the motors. This data can help the company find possible problems and plan maintenance before a major failure happens.
+
+---
+
+# 7. Conclusión
+
+En conclusión, los datos pueden ser de mucha ayuda para mejorar el mantenimiento de los motores eléctricos. En vez de esperar a que ocurra una falla o hacer mantenimiento solamente por tiempo, se pueden revisar las condiciones reales del motor.
+
+Con variables como la temperatura, vibración, corriente y horas de funcionamiento se pueden encontrar cambios que pueden indicar un problema.
+
+También considero que este proyecto es una buena aplicación de Big Data porque se pueden generar muchos datos de diferentes motores y sensores. Con esta información se pueden tomar mejores decisiones y tratar de evitar paradas inesperadas en la producción.
