@@ -1,4 +1,15 @@
 # Electiva VI - Ciencia de Datos - 2026-B
+<!--CONFIG
+FULL_NAME: JUAN DIEGO RAMIREZ REYES
+GITHUB_USER: juanchot4488-droid
+-->
+# Sobre mí
+
+Hola, mi nombre es JUAN DIEGO RAMIREZ REYES.
+
+Soy estudiante de Ingeniería Mecatrónica y me interesa la tecnología, la programación, la automatización y el mantenimiento industrial.
+
+En este repositorio estaré realizando y guardando las actividades correspondientes a mi formación académica.
 
 Repositorio de clase - Corporacion Universitaria del Huila (CORHUILA).
 
